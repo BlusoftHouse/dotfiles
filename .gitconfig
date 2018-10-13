@@ -1,0 +1,27 @@
+[user]
+    name = BlusoftHouse
+    email = blusofthouse@gmail.com
+[github]
+    user = blusoft
+[core]
+    editor = subl --wait
+    excludesfile = ~/.gitignore_global
+[commit]
+    template = ~/.gitmessage
+[alias]
+    c = commit -v
+    br = branch
+    co = checkout
+    st = status
+    la = "!git config -l | grep alias | cut -c 7-"
+    lol = log --graph --pretty=format:'%C(blue)%h%C(auto)%d %C(green)(%cr) %C(dim white)by %C(reset)%C(cyan)%an %C(white)%s %C(reset)'
+    wc = git whatchanged
+    dlc = diff --cached HEAD^
+    append = commit --amend --no-edit
+    branches = branch -vv
+    remotes = remote -v
+    changed = diff-tree --no-commit-id --name-only -r
+    conflicts = diff --diff-filter=U
+    unstage = reset HEAD --
+    filelog = log --graph --decorate --stat --pretty=short --abbrev-commit
+    latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
